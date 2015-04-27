@@ -32,5 +32,8 @@
     "eslint": "^0.20.0",
     "istanbul": "^0.3.13",
     "sinon": "^1.14.1"
+  },
+  "dependencies": {
+    "unique-random-array": "^1.0.0"
   }
 }
