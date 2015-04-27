@@ -1,0 +1,36 @@
+{
+  "name": "gen-name",
+  "version": "0.1.0",
+  "description": "generate a name",
+  "main": "./lib/gen-name",
+  "bin": {
+    "gen-name": "./bin/gen-name"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keis/rapidus.git"
+  },
+  "scripts": {
+    "lint": "eslint lib bin test && coffeelint lib bin test",
+    "test": "mocha --require test/bootstrap.js --compilers coffee:coffee-script/register --recursive test/unit",
+    "coverage": "istanbul cover _mocha --report lcovonly -- --require test/bootstrap.js --compilers coffee:coffee-script/register --recursive test/unit",
+    "billom": "billom package.json \"$npm_package_name\" > package.html",
+    "docs": "docco lib/*.js"
+  },
+  "keywords": [
+    "name",
+    "generate"
+  ],
+  "author": "David Keijser <keijser@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "billom": "^1.0.2",
+    "chai": "^2.3.0",
+    "coffee-script": "^1.9.2",
+    "coffeelint": "^1.9.4",
+    "docco": "^0.7.0",
+    "eslint": "^0.20.0",
+    "istanbul": "^0.3.13",
+    "sinon": "^1.14.1"
+  }
+}
